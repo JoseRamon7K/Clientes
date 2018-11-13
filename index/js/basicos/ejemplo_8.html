@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>DAW</title>
+    <link rel="stylesheet" href="../css/css_plantilla.css" />
+    <script>
+           
+    </script>
+    
+</head>
+<body>    
+    <header>
+        <p>
+            Esto es el header
+        </p>
+    </header> 
+
+    <main>
+        <nav>
+            <p>
+                Esto es el nav
+            </p>
+        </nav>
+        
+        <aside>
+            <p>
+                Esto es el aside
+            </p>
+        </aside>
+
+        <article>
+            <table>
+                <tr><td>.</td></tr>
+                <tr><td>.</td></tr>               
+                <tr><td>.</td></tr>                
+                <tr><td>.</td></tr>
+                <tr><td>.</td></tr>               
+                <tr><td>.</td></tr>                
+                <tr><td>.</td></tr>
+                <tr><td>.</td></tr>
+                <tr>                       
+                    <td>
+                        <label for="text">Respuesta</label>
+                    </td>
+                    <td>
+                        <label for="textfield" contenteditable="true"></label>
+                        <input type="text" name="textfield" id="id_mensaje">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="tex">Intentos</label>
+                    </td>
+                    <td>
+                        <label for="textfield"></label>
+                        <input type="text" name="textfield" id="id_respuesta">
+                    </td>
+                    
+                </tr>
+            </table>
+
+
+
+
+
+            <script>
+
+                var veces=["primera","segunda","terceda","cuarta","quinta","sexta","octava","novena", "decima","Eres muy tonto"];
+                var num=Math.round(Math.random()*(100-1)+1);
+                var cont=0;
+                var respuesta=document.getElementById("id_respuesta");
+                var mensaje=document.getElementById("id_mensaje");
+
+                do{
+                    do{
+                        var num2=prompt("Por favor introduzca un numero");
+                        if (num2==null||num2==""||num2==" ") {
+                            num2="Hola";
+                        }
+                    }while(isNaN(num2));
+
+                    cont++;
+                    if(cont<10){
+                        respuesta.value=veces[cont-1];
+                    }else{
+                        respuesta.value=(cont+1);
+                    }
+        
+                    if (num>num2) {
+                        mensaje.value="Has introducido el "+num2+".El número buscas es mas alto";
+                    }else if(num<num2){
+                        mensaje.value="Has introducido el "+num2+".El número buscas es mas bajo";
+                    }                        
+                    
+                }while(num!=num2);
+
+                if(cont<10){
+                    respuesta.value="Lo has conseguido a la "+veces[cont-1];
+                    mensaje.value="Lo has conseguido, era el "+num2;  
+                }else{
+                    respuesta.value=veces[9];
+                    mensaje.value="Lo has conseguido, era el "+num2;
+                }
+
+            </script>
+        </article>
+        
+    </main>
+   
+
+    <footer>
+        <p>
+            Esto es el footer
+        </p>
+    </footer>
+</body>
+</html>

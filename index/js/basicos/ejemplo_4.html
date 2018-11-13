@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>DAW</title>
+    <style>
+        
+        body{
+            height: 100%;
+        }
+        p{
+            color: rgb(0, 0, 0);            
+        }
+        td{
+            text-align: center;
+        }
+    </style>
+    <!--<link rel="stylesheet" href="css/css.css" />-->
+</head>
+<body>    
+    <header>
+    </header> 
+    
+	<span id="id_Otro" style="visibility: hidden;">Expresion Regular: <input TYPE="text" NAME="otro"></span><br>
+    <input TYPE="radio" NAME="expresion" value="Otro" onselect="visual()">Otro
+    <input type="button" value="Ejecutar" onclick="buton('Hola')">
+    <footer>
+        <script>
+            var is=true
+            function visual() {
+                var visible=document.getElementById("id_Otro");
+                visible.style="visibility: visible;";
+            }
+            document.bgColor="0,0,0";
+            function buton(hola) {    
+                //document.write(hola);            
+                if(is==true){
+                    is=false;
+                    document.bgColor="0,0,ff";
+                    
+                }else{
+                    is=true;
+                    document.bgColor="ff,ff,ff";
+                }
+                
+            }
+        </script>
+    </footer>
+</body>
+</html>

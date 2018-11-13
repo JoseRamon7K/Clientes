@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>DAW</title>
+    <link rel="stylesheet" href="../css/css_plantilla.css" />
+    <script>
+           
+    </script>
+    
+</head>
+<body>    
+    <header>
+        <p>
+            Esto es el header
+        </p>
+    </header> 
+
+    <main>
+        <nav>
+            <p>
+                Esto es el nav
+            </p>
+        </nav>
+        
+        <aside>
+            <p>
+                Esto es el aside
+            </p>
+        </aside>
+
+        <article>
+            <script>
+                var num=Math.round(Math.random()*(10-1)+1);
+                do{
+                    do {
+                        var num2=parseInt(prompt("Por favor introduzca un numero"));
+                    } while (isNaN(num2));
+                    if (num>num2) {
+                        document.write("Has introducido el "+num2+".<br>- El número buscas es mas alto<br>");
+                    }else if(num<num2){
+                        document.write("Has introducido el "+num2+".<br>- El número buscas es mas bajo<br>");
+                    }
+                }while(num!=num2);
+                    document.write("<br><strong>Has encontrado el número, era el "+num2+"</strong><br>");
+                
+            </script>
+        </article>
+        
+    </main>
+   
+
+    <footer>
+        <p>
+            Esto es el footer
+        </p>
+    </footer>
+</body>
+</html>

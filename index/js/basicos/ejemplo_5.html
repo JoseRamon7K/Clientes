@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>DAW</title>
+    <link rel="stylesheet" href="../css/css.css" />
+    <script>
+        do {
+            var num1=parseInt(prompt("Por favor introduzca primer numero"));
+        } while (isNaN(num1));
+        do{
+            var error=false;
+            var num2=parseInt(prompt("Por favor introduzca segundo numero"));
+            if(num2<num1){
+                error=true;
+            }
+            if(isNaN(num2)){
+                error=true;
+            }
+        } while (error==true);
+        document.write("Del "+num1+" --<br>");
+        for (let cont = num1; cont < num2; cont++) {
+            document.write((cont-num1+1)+"<br>");
+        }
+        document.write("-- hasta "+num2+"<br>");
+            
+        
+    </script>
+    
+</head>
+<body>    
+    <header>
+    </header> 
+
+    
+
+    <footer>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>DAW</title>
+    <link rel="stylesheet" href="../css/css.css" />
+    <script>
+       var random=0;
+       var num=new Array();
+            var repetir=false;
+            random=parseInt(Math.random()*(99-1)+1);
+            /*for (let i = 0; i < num.length; i++) {
+                if(num[i]==random){
+                    repite=true;
+                    break;
+                }                
+            }*/
+
+            if(repite==false){
+                num.push(random);
+                for (let i = 0; i < num.length; i++) {
+                    document.write(num[i]+",");              
+                }           
+            }
+    
+    </script>
+    
+</head>
+<body>    
+    <header>
+    </header> 
+
+    
+
+    <footer>
+    </footer>
+</body>
+</html>

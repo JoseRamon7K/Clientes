@@ -1,0 +1,30 @@
+#id_banner{
+    width: 400px;
+    height: 250px;
+    border: 1px black solid;
+    border-radius: 15px;
+    background-color: rgb(95, 95, 95);
+
+    padding: 10px;
+
+    position: fixed;
+    top: 200px;
+    left: 500px;
+
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    grid-template-rows: 1fr;
+}
+#id_banner>p{
+    color: white;
+
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#id_banner>input{
+    width: 30px;
+    height: 30px;
+    
+    grid-column: 2/3;
+    grid-row: 1/2;
+}

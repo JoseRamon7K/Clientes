@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>DAW</title>
+    <link rel="stylesheet" href="../css/css.css" />
+    <script>
+        var meses=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre"];
+        for (let i = 0; i < meses.length; i++) {
+            document.write(meses[i]+"<br>");
+            
+        }
+        document.write("<br>");
+        meses.push("Diciembre");
+        
+        for (let i = 0; i < meses.length; i++) {
+            document.write(meses[i]+"<br>");
+            
+        }
+        document.write("<br>");
+        meses.unshift("Todos");
+        for (let i = 0; i < meses.length; i++) {
+            document.write(meses[i]+"<br>");
+            
+        }
+        document.write("<br>");
+        meses.pop();
+        for (let i = 0; i < meses.length; i++) {
+            document.write(meses[i]+"<br>");
+            
+        }
+        document.write("<br>");
+        meses.shift();
+        for (let i = 0; i < meses.length; i++) {
+            document.write(meses[i]+"<br>");
+            
+        }
+        document.write("<br>");
+        var mes="";
+        do {
+            mes=prompt("Por favor introduzca un mes");
+        } while (!isNaN(mes));
+        meses.push(mes);
+        
+        for (let i = 0; i < meses.length; i++) {
+            document.write(meses[i]+"<br>");
+            
+        }
+
+    </script>
+    
+</head>
+<body>    
+    <header>
+    </header> 
+
+    
+
+    <footer>
+    </footer>
+</body>
+</html>

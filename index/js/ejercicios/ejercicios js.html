@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>DAW</title>
+    
+</head>
+<body>   
+    <script>
+        //EJERCICIO 7.------------------------------------------------
+        
+
+        function mostrarNumerosDNI(dni) {
+            //var num=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
+            var letras=['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+            var dni=prompt("Por favor introduzca DNI"); 
+            console.log((dni%23)+'='+letras[dni%23]);
+            return letras[dni%23];
+        }
+
+        //EJERCICIO 6.------------------------------------------------
+        //myFunctionFecha();
+
+        function myFunctionFecha() {
+            var myVar=setInterval(function(){ 
+                var fecha=new Date();
+                var texto=fecha.getHours()+':'+fecha.getMinutes()+':'+fecha.getSeconds();
+                alert(texto);
+            }, 1000);
+        }     
+
+        //EJERCICIO 5.------------------------------------------------
+        //myFunctionDNI()
+
+        DNI=new Object();
+        DNI.dnis=new Array();
+        DNI.letras=new Array();
+        function myFunctionDNI() {
+            var myVar=setInterval(function(){ 
+                
+                var dni=prompt("Por favor introduzca DNI"); 
+                if(dni==-1){
+                    clearInterval(myVar);
+                    var texto='';
+                    for(var i=0;i<DNI.dnis.length;i++){
+                        texto+=DNI.dnis[i]+'-'+DNI.letras[i]+'<br>';
+                    }                    
+                    document.write(texto);
+                }else{
+                    DNI.dnis.push(dni);
+                    DNI.letras.push(mostrarLetraDNI(dni));
+                }
+            }, 3000);
+        }     
+        function mostrarLetraDNI(dni) {
+            //var num=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
+            var letra=['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+            console.log((dni%23)+'='+letra[dni%23]);
+            return letra[dni%23];
+        }
+
+        //EJERCICIO 4.------------------------------------------------
+        
+        //obtenFechaN();        
+        //obtenFecha();
+        
+        
+        oFecha=new Object();
+
+        var meses=new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');
+        //oFecha.d=new Date();
+        //d=actualizarFecha();
+        d=new Date();
+        oFecha.diaSemana=d.getUTCDay();
+        oFecha.diaMes=d.getDate();
+        oFecha.mesNum=d.getMonth();
+        oFecha.mesNom=meses[oFecha.mesNum];
+        oFecha.año=d.getFullYear();
+
+        function obtenFecha(){  
+            console.log('algo');
+                      
+            document.write(oFecha.diaMes+'/'+oFecha.mesNum+'/'+oFecha.año+'<br>');
+        };
+        function obtenFechaN(){   
+            
+            console.log('algo');   
+            var semana=new Array('Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo');      
+            document.write('Hoy es '+semana[oFecha.diaSemana-1]+', '+oFecha.diaMes+' de '+oFecha.mesNom+' de '+oFecha.año+'<br>');
+        };
+        function actualizarFecha(){
+            return new Date();
+        };
+
+        //EJERCICIO 3.------------------------------------------------
+        //fechas();
+
+        function fecha(){
+            var semana=new Array('Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo');
+            var meses=new Array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');
+            var d=new Date();
+            var dia_semana=d.getUTCDay();
+            var dia_mes=d.getDate();
+            var mes=d.getMonth();
+            var año=d.getFullYear();
+            document.write('Hoy es '+semana[dia_semana-1]+', '+dia_mes+' de '+meses[mes]+' de '+año);
+        }
+
+        //EJERCICIO 2.------------------------------------------------
+        //operacion();
+
+        function operacion(){
+            var num=prompt("Insertar Operacion");
+            var num1=0;
+            var num2=0;            
+            var result;
+            console.log(num);
+            for (let i = 0; i < num.length; i++) {
+                switch (num[i]) {
+                    case '+':{                        
+                        num1=num.substring(0,i);
+                        num2=num.substring(i+1,num.length);
+                        result=parseInt(num1)+parseInt(num2);
+                        document.write(num+'='+result);
+                        break;
+                    }
+                    case '-':{
+                        num1=num.substring(0,i);
+                        num2=num.substring(i+1,num.length);
+                        result=parseInt(num1)-parseInt(num2);
+                        document.write(num+'='+result);
+                        break;
+                    }
+                    case '*':{
+                        num1=num.substring(0,i);
+                        num2=num.substring(i+1,num.length);
+                        result=parseInt(num1)*parseInt(num2);
+                        document.write(num+'='+result);
+                        
+                        break;
+                    }
+                    case '/':{
+                        num1=num.substring(0,i);
+                        num2=num.substring(i+1,num.length);
+                        result=parseInt(num1)/parseInt(num2);
+                        document.write(num+'='+result);
+                        
+                        break;
+                    }
+                    default:
+                        if (isNaN(num[i])) {                            
+                        document.write('ERROR');   
+                        }
+                }   
+            }
+        }
+        
+        //EJERCICIO 1.------------------------------------------------
+        //tablarandom();
+
+        function tablarandom(){
+            var array=new Array;
+         
+            for (var i = 0; i < 100; i++){
+                array[i]=parseInt(Math.random()*(100-1)+1);
+            }
+            array.sort(function (a, b){return a - b;});
+            mostrarTabla(array);
+        }        
+        function mostrarTabla(tabla){
+            var cadena;
+            cadena='<table border=1px>';
+            cadena+='<tr>';
+            for (let i = 0; i < tabla.length; i++) {
+                if (i%10==0) {
+                    cadena+='<tr>';
+                }                
+                cadena=cadena+'<td>'+tabla[i]+'</td>';
+                if (i%10==-1) {
+                    cadena+='</tr>';
+                } 
+            }
+            document.write(cadena+'</table>');
+        }
+    </script>
+</body>
+</html>

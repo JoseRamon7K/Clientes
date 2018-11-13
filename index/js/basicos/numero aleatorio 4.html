@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>DAW</title>
+    <link rel="stylesheet" href="../css/css_plantilla.css" />
+    <script>
+           
+    </script>
+    
+</head>
+<body>    
+    <header>
+        <p>
+            Esto es el header
+        </p>
+    </header> 
+
+    <main>
+        <nav>
+            <p>
+                Esto es el nav
+            </p>
+        </nav>
+        
+        <aside>
+            <p>
+                Esto es el aside
+            </p>
+        </aside>
+
+        <article>
+            <script>
+                var veces=["primera","segunda","terceda","cuarta","quinta","sexta","octava","novena", "decima","Eres muy tonto"];
+                var nums=new Array();
+                var num=Math.round(Math.random()*(10-1)+1);
+                var cont=0;
+                do{
+                    do {
+                        var num2=parseInt(prompt("Por favor introduzca un numero"));
+                    } while (isNaN(num2));
+        
+                    nums.push(num2);
+                    cont++;
+                    if(cont<10){
+                        document.write(veces[cont-1]+" intento:"+num2+"<br>");
+                    }else{
+                        document.write((cont+1)+"º intento:"+num2+"<br>");
+                    }
+        
+                    if (num>num2) {
+                        document.write("Has introducido el "+num2+". El número buscas es mas alto<br>");
+                    }else if(num<num2){
+                        document.write("Has introducido el "+num2+". El número buscas es mas bajo<br>");
+                    }                        
+                    
+                }while(num!=num2);
+                    if(cont<10){
+                        document.write("<br><strong>Lo has conseguido a la "+veces[cont-1]+" vez, era el "+num2+"</strong><br>");
+                    }else{
+                        document.write("<br><strong>"+veces[9]+", era el "+num2+"</strong><br>");
+                    }
+                    
+            </script>
+        </article>
+        
+    </main>
+   
+
+    <footer>
+        <p>
+            Esto es el footer
+        </p>
+    </footer>
+</body>
+</html>

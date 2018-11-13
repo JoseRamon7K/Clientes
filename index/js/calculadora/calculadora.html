@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>DAW</title>
+    
+    <link rel="stylesheet" href="../../css_index.css" />
+    <link rel="stylesheet" href="css_calculadora.css" />    
+    <script src="calculadora.js"></script>
+    
+</head>
+<body>    
+    <header>
+        <h1 id="titulo">Jose Ramón Cabrera Roig 2º DAW 7K 2018/19</h1>
+    </header> 
+
+    <main>
+        <nav> 
+            <a href="../../index2.html"><button>Home</button></a>            
+            <a href="../index_js.html"><button>JavaScript</button></a>
+            <a href="../../php/index_html.html"><button>PHP</button></a>
+            <a href="../../css/index_css.html"><button>CSS</button></a>
+        </nav>
+
+        <section>
+            <div class="calculadora">
+                <table >
+                    <tr>
+                        <td colspan="4">
+                            <input type="textfield" name="texto" id="id_text" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="C" onclick="borrar()">
+                        </td>
+                        <td colspan="2">
+                            <input type="button" value="&lt;=" onclick="borrarUltima()" class="doble">
+                        </td>
+                        <td>
+                            <input type="button" value="/" onclick="operacion('/')">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <input type="button" value="7" onclick="insert(7)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="8" onclick="insert(8)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="9" onclick="insert(9)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="*" onclick="operacion('*')">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="button" value="4" onclick="insert(4)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="5" onclick="insert(5)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="6" onclick="insert(6)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="-" onclick="operacion('-')">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="button" value="1" onclick="insert(1)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="2" onclick="insert(2)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="3" onclick="insert(3)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="+" onclick="operacion('+')">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input type="button" value="0" onclick="insert(0)" class="doble num">
+                        </td>
+                        <td>
+                            <input type="button" value="." onclick="insert('.')">
+                        </td>
+                        <td>
+                            <input type="button" value="=" onclick="igual()">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        
+    </main>
+   
+
+    <footer>
+        <p>
+            Creador: Jose Ramón Cabrera Roig
+        </p>
+    </footer>
+</body>
+</html>

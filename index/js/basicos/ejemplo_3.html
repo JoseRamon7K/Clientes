@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>DAW</title>
+    <style>
+        html{
+            background-color: rgb(188, 227, 245);
+        }
+        p{
+            color: rgb(0, 0, 0);
+            
+        }
+        td{
+            text-align: center;
+        }
+    </style>
+    <!--<link rel="stylesheet" href="css/css.css" />-->
+</head>
+<body>    
+    <header>
+    </header> 
+
+    <table border="1">
+        <tr>
+            <td class="Nombre">
+                <strong><p>Nombre</p></strong>
+            </td>
+            <td class="Precio">
+                <strong><p>Precio</p></strong>
+            </td>
+        </tr>
+        <tr>
+            <td class="Nombre">
+                <p>Coca cola</p>
+            </td>
+            <td class="Precio">
+                <p>1.2</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="Nombre">
+                <p>Fanta</p>
+            </td>
+            <td class="Precio">
+                <p>0.8</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="Nombre">
+                <p>Acuario</p>
+            </td>
+            <td class="Precio">
+                <p>1</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="Nombre">
+                <p>Agua</p>
+            </td>
+            <td class="Precio">
+                <p>1.5</p>
+            </td>
+        </tr>
+    </table>
+    
+
+    <footer>
+        <script>
+            var pCola=1.2;
+            var pFanta=0.8;
+            var pAcuario=1;
+            var pAgua=1.5;
+
+            var saldo=parseInt(prompt("Cuanto dinero tiene"));
+            if (isNaN(saldo)) {
+                alert("Se debe introducir un numero");
+            }else{
+                document.write("Saldo actual: "+saldo+"\n");
+        
+                var refresco=prompt("Por favor elija su bebida").toLowerCase();
+                if (!isNaN(refresco)) {
+                    alert("Se debe introducir el nombre de la bebida");
+                }else{
+                    var precio=0;
+                    var error=false;
+                    if (refresco=="coca cola") {
+                        precio=parseFloat(pCola);
+
+                    } else if(refresco=="fanta") {
+                        precio=parseFloat(pFanta);
+
+                    } else if(refresco=="acuario") {
+                        precio=parseFloat(pAcuario);
+
+                    } else if(refresco=="agua") {
+                        precio=parseFloat(pAgua);
+
+                    } else {
+                        error=true;
+                    }
+                                
+                    if (error==false){
+                        var pago=parseFloat(prompt("El pago es de "+precio+"€\nIntrocuzca monedas:"));
+                        if (isNaN(pago)) {
+                            alert("Se debe introducir un numero");
+                        }else{
+                            document.write("<table border='1'><tr><td>Bebida</td><td>Precio</td><td>Pagado</td><td>Vuelta</td></tr>");
+                            if (pago>precio) {
+                                alert(refresco+" tiene un coste es de "+precio+" se ha pagado "+pago+". Se devuelve "+(pago-precio));
+                                document.write("<tr><td>"+refresco+"</td><td>"+precio+"</td><td>"+pago+"</td><td>"+(pago-precio)+"</td></tr>");
+                                saldo-=precio;
+                            }else if (pago==precio) {
+                                alert(refresco+" tiene un coste es de "+precio+" se ha pagado "+pago+". Se ha pagado el precio justo.");
+                                document.write("<tr><td>"+refresco+"</td><td>"+precio+"</td><td>"+pago+"</td><td>0</td></tr>");
+                                saldo-=precio;
+                            }else{
+                                alert(refresco+" tiene un coste es de "+precio+" se ha pagado "+pago+". No se ha pagado lo suficiente, falta "+(precio-pago));
+                                document.write("<tr><td>"+refresco+"</td><td>"+precio+"</td><td>"+pago+"</td><td>-"+(precio-pago)+"</td></tr>");
+                            }
+
+                            alert("Gracias por su visita.");
+                            document.write("</table><br>Saldo actual: "+saldo+"\n");
+                        }
+                    }
+                }
+            }
+            
+        </script>
+    </footer>
+</body>
+</html>
