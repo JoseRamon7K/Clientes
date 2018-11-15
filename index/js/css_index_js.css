@@ -8,3 +8,6 @@ table table{
 table{    
     margin: auto;
 }
+section{
+    overflow: auto;
+}
