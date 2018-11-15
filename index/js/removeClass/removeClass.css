@@ -28,6 +28,13 @@
     grid-column: 2/3;
     grid-row: 1/2;
 }
-a.cl_destaca{
+a.cl_destaca1{
     color: white;
+    background-color: black;
+    font-weight: bolder;
+}
+a.cl_destaca2{
+    color: red;
+    font-family: cursive;
+    text-decoration: wavy;
 }

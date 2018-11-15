@@ -1,34 +1,55 @@
 $(document).ready(function(){
 
-    document.getElementById('id_botonvideos').addEventListener("click",destacarlo,false);
-    document.getElementById('id_botoninfo').addEventListener("click",destacar,false);
-    document.getElementById('r_videos').addEventListener("click",destacar_videos,false);
-    document.getElementById('r_info').addEventListener("click",destacar_info,false);
+    document.getElementById('id_botonvideos').addEventListener("click",destacarlo2,false);
+    document.getElementById('id_botoninfo').addEventListener("click",destacar2,false);
+    document.getElementById('id_botonnav').addEventListener("click",destacando2,false);
+    var radioOption = [document.getElementsByName('rb')[0],document.getElementsByName('rb')[1],document.getElementsByName('rb')[2]];
+    //Use forEach
+    radioOption.forEach(function(e) {
+        e.addEventListener("click", function() {     
+            if (e.value=='Video') {
+                destacarlo1();
+            }else if(e.value=='Info'){
+                destacar1();
+            }
+            else if(e.value=='Nav'){
+                destacando1();
+            }
+        });
+    });
 });
 
-function destacar_videos(){
-
-    if($("#r_videos".value)==true){
-        $(".cl_videos").addClass("cl_destaca");
-    }else{
-        $(".cl_videos").removeClass("cl_destaca");
-    }
+function destacarlo1(){
+    $(".cl_videos1").addClass("cl_destaca1");
+    $(".cl_info1").removeClass("cl_destaca1");    
+    $(".cl_buscador1").removeClass("cl_destaca1");
 }
 
-function destacar_info(){
-    if($("#r_info".value)==true){
-        $(".cl_info").addClass("cl_destaca");
-    }else{
-        $(".cl_info").removeClass("cl_destaca");
-    }
+function destacar1(){
+    $(".cl_videos1").removeClass("cl_destaca1");
+    $(".cl_info1").addClass("cl_destaca1");     
+    $(".cl_buscador1").removeClass("cl_destaca1");
+}
+function destacando1(){
+    $(".cl_videos1").removeClass("cl_destaca1");    
+    $(".cl_info1").removeClass("cl_destaca1"); 
+    $(".cl_buscador1").addClass("cl_destaca1");
 }
 
-function destacarlo(){
-    $(".cl_videos").addClass("cl_destaca");
-    $(".cl_info").removeClass("cl_destaca");
+function destacarlo2(){
+    $(".cl_videos2").addClass("cl_destaca2");
+    $(".cl_info2").removeClass("cl_destaca2");
+    $(".cl_buscador2").removeClass("cl_destaca2");
 }
 
-function destacar(){
-    $(".cl_videos").removeClass("cl_destaca");
-    $(".cl_info").addClass("cl_destaca");
+function destacar2(){
+    $(".cl_videos2").removeClass("cl_destaca2");
+    $(".cl_info2").addClass("cl_destaca2");    
+    $(".cl_buscador2").removeClass("cl_destaca2");
+}
+
+function destacando2(){
+    $(".cl_videos2").removeClass("cl_destaca2");    
+    $(".cl_info2").removeClass("cl_destaca2"); 
+    $(".cl_buscador2").addClass("cl_destaca2");
 }

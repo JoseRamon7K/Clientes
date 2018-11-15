@@ -25,8 +25,9 @@ $(document).ready(function(){
             var rN=document.getElementById('relleneNombre');            
             if (rN==null) {
                 $('#id_nombre').after('<span style="color:red" id="relleneNombre">Rellene este campo</span>');
-
-            }            
+            } else{
+                $('#relleneNombre').fadeIn(500);
+            }           
         }else{           
             $('#relleneNombre').fadeOut(1000);
         }
@@ -35,8 +36,9 @@ $(document).ready(function(){
             var rA=document.getElementById('relleneApellido');            
             if (rA==null) {
                 $('#id_apellidos').after('<span style="color:red" id="relleneApellido">Rellene este campo</span>');
-
-            }            
+            }  else{
+                $('#relleneApellido').fadeIn(500);
+            }              
         }else{           
             $('#relleneApellido').fadeOut(1000);
         }

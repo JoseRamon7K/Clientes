@@ -19,7 +19,8 @@
     <main>
         <nav>
             <p>
-                Esto es el nav
+                Esto es el nav<br>
+                <a href="../index_js.html">Volver...</a>
             </p>
         </nav>
         
@@ -32,17 +33,7 @@
         <article>
             <script>
                 var num=Math.round(Math.random()*(10-1)+1);
-                do{
-                    do {
-                        var num2=parseInt(prompt("Por favor introduzca un numero"));
-                    } while (isNaN(num2));
-                    if (num>num2) {
-                        document.write("Has introducido el "+num2+".<br>- El número buscas es mas alto<br>");
-                    }else if(num<num2){
-                        document.write("Has introducido el "+num2+".<br>- El número buscas es mas bajo<br>");
-                    }
-                }while(num!=num2);
-                    document.write("<br><strong>Has encontrado el número, era el "+num2+"</strong><br>");
+                document.write("El numero aleatorio es el "+num);
                 
             </script>
         </article>

@@ -7,15 +7,31 @@
 </head>
 <body>   
     <script>
-        //EJERCICIO 7.------------------------------------------------
-        
-
-        function mostrarNumerosDNI(dni) {
+        //EJERCICIO 7.------------------------------------------------   
+        var array=mostrarNumerosDNI();
+        for (let index = 0; index < array.length; index++) {
+            document.write(array[index]+'<br>');
+        }
+        function mostrarNumerosDNI() {
             //var num=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
             var letras=['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
-            var dni=prompt("Por favor introduzca DNI"); 
-            console.log((dni%23)+'='+letras[dni%23]);
-            return letras[dni%23];
+            var dni=prompt("Por favor introduzca letra de DNI"); 
+            var pos;
+            var arrayRangos=new Array();
+            for (let index = 0; index < letras.length; index++) {
+                if (dni.toUpperCase()==letras[index]) {
+                    pos=index;
+                }
+                console.log(letras.length);
+            }
+            document.write('<strong><i><u>Con Letra '+dni.toUpperCase()+'</u></i></strong><br>');
+            console.log(pos);
+            for (let index = 1; index < 999; index++){
+                if (index%23==pos) {
+                    arrayRangos.push(index);
+                }
+            }
+            return arrayRangos;
         }
 
         //EJERCICIO 6.------------------------------------------------
