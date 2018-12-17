@@ -10,7 +10,8 @@ $(document).ready(function(){
     $(":contains('€') , input").css("color","green");
     $("div:empty").css("background-color","yellow");
 
-    var imagenes=document.querySelectorAll("img");
+    $(":contains('Camiseta')").siblings('img').css("border-color","green");  
+    /*var imagenes=document.querySelectorAll("img");
     for (let i = 0; i < imagenes.length; i++) {
         //console.log(imagenes[i].src);
         var str=imagenes[i].src.substr(imagenes[i].src.length-13,8);        
@@ -18,9 +19,10 @@ $(document).ready(function(){
             //console.log(imagenes[i].alt);            
             $('img[alt="'+imagenes[i].alt+'"]').css("border-color","green");  
         }        
-    }
-    
-    var items=document.querySelectorAll(".item");    
+    }*/
+    $(".item").first().css("background-color","red"); 
+    $(".item").last().css("background-color","red"); 
+    /*var items=document.querySelectorAll(".item");    
     $('#'+items[0].id).css("background-color","red"); 
-    $('#'+items[items.length-1].id).css("background-color","red"); 
+    $('#'+items[items.length-1].id).css("background-color","red"); */
 });
