@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>DAW</title>
+    <link rel="stylesheet" href="../../css_index.css" />    
+    <link rel="stylesheet" href="css_calculadora.css" />   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</head>
+<body> 
+    <a href="../../index2.html">
+        <header>
+            <h1>Jose Ramón Cabrera Roig 2º DAW 7K 2018/19 </h1>
+        </header> 
+    </a>  
+    <nav class="container-fluid">
+        <ul class="row">
+            <a href="../../index2.html" class="col-12 home"><li>Home</li></a>
+        </ul>
+    </nav>
+    <main>
+        <div class="principal">
+            <div class="calculadora">
+                <table >
+                    <tr>
+                        <td colspan="4">
+                            <input type="textfield" name="texto" id="id_text" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="C" onclick="borrar()">
+                        </td>
+                        <td colspan="2">
+                            <input type="button" value="&lt;=" onclick="borrarUltima()" class="doble">
+                        </td>
+                        <td>
+                            <input type="button" value="/" onclick="operacion('/')">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <input type="button" value="7" onclick="insert(7)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="8" onclick="insert(8)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="9" onclick="insert(9)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="*" onclick="operacion('*')">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="button" value="4" onclick="insert(4)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="5" onclick="insert(5)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="6" onclick="insert(6)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="-" onclick="operacion('-')">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="button" value="1" onclick="insert(1)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="2" onclick="insert(2)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="3" onclick="insert(3)" class="num">
+                        </td>
+                        <td>
+                            <input type="button" value="+" onclick="operacion('+')">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input type="button" value="0" onclick="insert(0)" class="doble num">
+                        </td>
+                        <td>
+                            <input type="button" value="." onclick="insert('.')">
+                        </td>
+                        <td>
+                            <input type="button" value="=" onclick="igual()">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+   
+
+    <footer>
+        <p>
+            Creador: Jose Ramón Cabrera Roig
+        </p>
+    </footer>
+    <script src="calculadora.js"></script>
+</body>
+</html>

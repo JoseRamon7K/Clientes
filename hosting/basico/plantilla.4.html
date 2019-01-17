@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>DAW</title>
+    <link rel="stylesheet" href="../css_index.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</head>
+<body> 
+    <a href="../index2.html">
+        <header>
+            <h1>Jose Ramón Cabrera Roig 2º DAW 7K 2018/19 </h1>
+        </header> 
+    </a>  
+    <nav class="container-fluid">
+        <ul class="row">
+            <a href="../index2.html" class="col-12 home"><li>Home</li></a>
+        </ul>
+    </nav>
+    <main>
+        <div class="principal">
+            <script>
+                do {
+                    var num1=parseInt(prompt("Por favor introduzca primer numero"));
+                } while (isNaN(num1));
+                do{
+                    var error=false;
+                    var num2=parseInt(prompt("Por favor introduzca segundo numero"));
+                    if(num2<num1){
+                        error=true;
+                    }
+                    if(isNaN(num2)){
+                        error=true;
+                    }
+                } while (error==true);
+                document.write("Del "+num1+" --<br>");
+                for (let cont = num1; cont < num2; cont++) {
+                    document.write((cont-num1+1)+"<br>");
+                }
+                document.write("-- hasta "+num2+"<br>");
+                    
+                
+            </script>
+        </div>
+    </main>
+   
+
+    <footer>
+        <p>
+            Creador: Jose Ramón Cabrera Roig
+        </p>
+    </footer>
+</body>
+</html>

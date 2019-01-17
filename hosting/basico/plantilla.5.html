@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>DAW</title>
+    <link rel="stylesheet" href="../css_index.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</head>
+<body> 
+    <a href="../index2.html">
+        <header>
+            <h1>Jose Ramón Cabrera Roig 2º DAW 7K 2018/19 </h1>
+        </header> 
+    </a>  
+    <nav class="container-fluid">
+        <ul class="row">
+            <a href="../index2.html" class="col-12 home"><li>Home</li></a>
+        </ul>
+    </nav>
+    <main>
+        <div class="principal">
+            <script>
+                var meses=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre"];
+                for (let i = 0; i < meses.length; i++) {
+                    document.write(meses[i]+"<br>");
+                    
+                }
+                document.write("<br>");
+                meses.push("Diciembre");
+                
+                for (let i = 0; i < meses.length; i++) {
+                    document.write(meses[i]+"<br>");
+                    
+                }
+                document.write("<br>");
+                meses.unshift("Todos");
+                for (let i = 0; i < meses.length; i++) {
+                    document.write(meses[i]+"<br>");
+                    
+                }
+                document.write("<br>");
+                meses.pop();
+                for (let i = 0; i < meses.length; i++) {
+                    document.write(meses[i]+"<br>");
+                    
+                }
+                document.write("<br>");
+                meses.shift();
+                for (let i = 0; i < meses.length; i++) {
+                    document.write(meses[i]+"<br>");
+                    
+                }
+                document.write("<br>");
+                var mes="";
+                do {
+                    mes=prompt("Por favor introduzca un mes");
+                } while (!isNaN(mes));
+                meses.push(mes);
+                
+                for (let i = 0; i < meses.length; i++) {
+                    document.write(meses[i]+"<br>");
+                    
+                }
+        
+            </script>
+        </div>
+    </main>
+   
+
+    <footer>
+        <p>
+            Creador: Jose Ramón Cabrera Roig
+        </p>
+    </footer>
+    <script src=""></script>
+</body>
+</html>

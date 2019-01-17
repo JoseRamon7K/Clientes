@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    background-color: rgb(198, 223, 252);
+    text-align: center;    
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px, 50px,1fr,50px;
+    margin: 0px;
+    grid-template-areas: 
+    'header'
+    'nav'
+    'main'
+    'footer';
+}
+header{
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 2px 2px black;
+    background-color: rgb(50, 4, 255);
+    border: 1px black solid;    
+    text-align: center;
+    grid-area: 'header';
+}
+
+main{    
+    grid-area: 'main';    
+    background-color: white;
+}
+
+footer{
+    grid-area: 'footer';
+    font-weight: bolder;
+    color: white;
+    text-shadow: 2px 2px black;
+    background-color: rgb(0, 0, 0);
+    border: 1px black solid;
+    text-align: center;
+    padding: 10px;
+}
+
+.principal{
+    width: 98%;
+    min-height: 500px;
+    background-color: rgba(157, 117, 250,0.6);
+    margin: 3px auto;
+    padding: 15px;
+}
+
+
+nav{
+    grid-area: 'nav';
+    width: 100%;
+    display: flex;
+    color: rgb(255, 255, 255);
+}
+nav a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+nav a:hover{
+    text-decoration: none;
+    color: rgba(255, 255, 255);
+
+}
+nav ul{
+    font-size: 2rem;
+    margin: 1px;
+    padding: 0;
+}
+nav li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+nav .princi{
+    flex-grow: 1;
+    flex-basis: 0;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.623);
+    text-align: center;
+    display: inline-block;
+    border: 2px solid white;
+}
+
+nav .home{   
+    flex-grow: 1;
+    flex-basis: 0;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.623);
+    text-align: center;
+    display: inline-block;
+    border: 2px solid white;
+}
+
+nav .secun{
+    width: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    right: 0px;
+}
+
+nav .secunr,nav .secunl,nav .secunc{
+    position: absolute;       
+    margin-top: -48px;
+    width: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+nav .secunr{
+    left: 100%;
+}
+nav .secunl{ 
+    right: 100%;
+}
+nav .secunc{  
+    border-top: 2px dotted white; 
+    margin-top: 0px;
+}
+
+.secun li:hover, .secunr li:hover, .secunl li:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav li:hover{
+    background-color: rgba(0,0,0, 0.8);
+}
+
+.subs{
+    text-decoration: underline;
+}
+
+h1 a,h1 a:hover,h1 a:visited{
+    text-decoration: none;
+    color:white;
+}

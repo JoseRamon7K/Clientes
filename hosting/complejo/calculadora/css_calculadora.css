@@ -1,0 +1,27 @@
+.calculadora{
+    border: 1px black double;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 220px;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+}
+input{
+    width: 50px;
+    height: 50px;    
+    border-radius: 10px;
+}
+#id_text{
+    width: 97%;
+    height: 50px;
+    text-align: right;    
+    border-radius: 10px;
+}
+
+.doble{
+    width: 100%;
+}
+.num{
+    background-color: black;
+    color: white;
+}
